@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paciente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido, Paciente</h1>
+        <div>
+            <h2>Agendar Cita</h2>
+            <form id="agendarCitaForm">
+                <label for="medico">Médico:</label>
+                <select id="medico" required></select>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" required>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" required>
+                <button type="submit">Agendar</button>
+            </form>
+        </div>
+        <div>
+            <h2>Mis Citas</h2>
+            <ul id="listaCitas"></ul>
+        </div>
+        <button onclick="exportarPDF()">Exportar a PDF</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
